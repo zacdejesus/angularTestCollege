@@ -1,0 +1,10 @@
+<div>
+    <h1>Comments del post {{ comments[0].id }}</h1>
+    <ul *ngIf="isLogged">
+        <li *ngFor="let comment of comments">
+            <h3>{{ comment.name }}</h3>
+            <h4>{{ comment.email }}</h4>
+            <h6>{{ comment.body }}</h6>
+        </li>
+    </ul>
+</div>

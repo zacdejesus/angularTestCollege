@@ -1,0 +1,9 @@
+<div>
+    <h1>Posts para user {{ userId }}</h1>
+    <ul *ngIf="isLogged">
+        <li *ngFor="let post of posts">
+            <a [routerLink]="['/Comment' , post.id ]">{{ post.title }}</a>
+            <h6>{{ post.body }}</h6>
+        </li>
+    </ul>
+</div>
